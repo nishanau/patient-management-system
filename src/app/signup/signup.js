@@ -282,11 +282,11 @@ const SignupForm = () => {
                                     </div>
 
                                 </div>
-                                <div className="m-1  flex flex-col items-center w-full">
+                                <div className=" flex flex-col items-center w-full">
                                     <MyCheckbox className="m-2" name="acceptedTerms" >
                                         Remember Me
                                     </MyCheckbox>
-                                    <Button className="m-2" variant="outlined" type="submit">Submit</Button>
+                                    <Button className="m-2 w-96" variant="outlined" size="large" type="submit">Submit</Button>
                                 </div>
 
 
