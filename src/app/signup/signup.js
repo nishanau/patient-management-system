@@ -96,8 +96,9 @@ const MySelect = ({ label, children, ...props }) => {
 const SignupForm = () => {
     return (
         <>
-            <div className="flex items-center  justify-center bg-custom">
-                <Card className='flex-col m-2 md:m-32 md:flex'>
+            <div class="flex flex-col bg-cover bg-center h-screen justify-center items-center overflow-auto" style={{ backgroundImage: "url('https://www.eatingwell.com/thmb/YxkWBfh2AvNYrDKoHukRdmRvD5U=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/article_291139_the-top-10-healthiest-foods-for-kids_-02-4b745e57928c4786a61b47d8ba920058.jpg')" }}>
+
+                <Card className=' m-1 w-full  h-full  md:m-16 md:w-5/6  overflow-y-auto '>
 
                     <CardContent>
                         <Formik
@@ -168,7 +169,7 @@ const SignupForm = () => {
                                     )
                                     .required('Required'),
                                 gender: Yup.string()
-                                        .required('required')
+                                    .required('required')
                             })}
                             onSubmit={(values, { setSubmitting }) => {
                                 setTimeout(() => {
@@ -177,9 +178,10 @@ const SignupForm = () => {
                                 }, 400);
                             }}
                         >
-                            <Form>
-                                <div className='flex'>
-                                    <div className='w-1/3 m1 flex-1'>
+
+                            <Form className='flex flex-col'>
+                                <div className='flex flex-col md:flex-row'>
+                                    <div className='flex flex-col w-full'>
                                         <p className='h-5 mb-3 font-bold'>Authorization</p>
                                         <MyTextInput
                                             label="Username"
@@ -211,15 +213,15 @@ const SignupForm = () => {
 
                                     </div>
 
-                                    <div className=' w-1/3 m-1 flex-1'>
-                                        <p className='h-5 mb-3 font-bold'>Address</p>
-                                        <div className='flex m-2'>
+                                    <div className=' flex flex-col w-full'>
+                                        <p className=' h-5 mb-3 font-bold'>Address</p>
+                                        <div className='flex flex-col md:flex-row'>
                                             <MyTextInput
                                                 label="streetnumber"
                                                 name="streetNumber"
                                                 type="text"
                                                 placeholder="Street Number"
-                                                className="m-1"
+
                                             />
 
                                             <MyTextInput
@@ -227,18 +229,18 @@ const SignupForm = () => {
                                                 name="street"
                                                 type="text"
                                                 placeholder="Street"
-                                                className="w-full m-1"
+
                                             />
                                         </div>
 
-                                        <div className='flex m-2'>
+                                        <div className='flex flex-col md:flex-row'>
                                             <MyTextInput
                                                 label="Suburb"
                                                 name="suburb"
                                                 type="text"
                                                 placeholder="Suburb"
                                             />
-                                            <MySelect label="State" name="state">
+                                            <MySelect label="State" name="state" className="m-2">
                                                 <MenuItem value="Tasmania">TAS</MenuItem>
                                                 <MenuItem value="Western Australia">WA</MenuItem>
                                                 <MenuItem value="Queensland">QLD</MenuItem>
@@ -248,7 +250,7 @@ const SignupForm = () => {
                                             </MySelect>
                                         </div>
 
-                                        <div className='flex m-2'>
+                                        <div className='flex flex-col md:flex-row'>
                                             <MyTextInput
                                                 label="Country"
                                                 name="country"
@@ -266,9 +268,9 @@ const SignupForm = () => {
 
                                     </div>
 
-                                    <div className='w-1/3 flex-1'>
+                                    <div className='flex flex-col w-full'>
                                         <p className='h-5 mb-3 font-bold'>Extra Information</p>
-                                        <MySelect label="Gender" name="gender">
+                                        <MySelect label="Gender" name="gender" className="m-2">
                                             <MenuItem value="M">Male</MenuItem>
                                             <MenuItem value="F">Female</MenuItem>
                                             <MenuItem value="O">Other</MenuItem>
@@ -280,19 +282,21 @@ const SignupForm = () => {
                                     </div>
 
                                 </div>
-
-                                <div className="m-1">
+                                <div className="m-1  flex flex-col items-center w-full">
                                     <MyCheckbox className="m-2" name="acceptedTerms" >
                                         Remember Me
                                     </MyCheckbox>
                                     <Button className="m-2" variant="outlined" type="submit">Submit</Button>
                                 </div>
 
+
                             </Form>
+
                         </Formik>
                     </CardContent>
 
                 </Card>
+
             </div>
         </>
     );
