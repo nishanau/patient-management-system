@@ -98,7 +98,7 @@ const SignupForm = () => {
         <>
             <div class="flex flex-col bg-cover bg-center h-screen justify-center items-center overflow-auto" style={{ backgroundImage: "url('https://www.eatingwell.com/thmb/YxkWBfh2AvNYrDKoHukRdmRvD5U=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/article_291139_the-top-10-healthiest-foods-for-kids_-02-4b745e57928c4786a61b47d8ba920058.jpg')" }}>
 
-                <Card className=' m-1 w-full  h-full  md:m-16 md:w-5/6  overflow-y-auto '>
+                <Card className=' m-1 w-full  h-full  lg:m-16 md:w-5/6  overflow-y-auto '>
 
                     <CardContent>
                         <Formik
@@ -180,7 +180,7 @@ const SignupForm = () => {
                         >
 
                             <Form className='flex flex-col'>
-                                <div className='flex flex-col md:flex-row'>
+                                <div className='flex flex-col lg:flex-row'>
                                     <div className='flex flex-col w-full'>
                                         <p className='h-5 mb-3 font-bold'>Authorization</p>
                                         <MyTextInput
