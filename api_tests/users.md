@@ -77,32 +77,7 @@
 - Description: Forgot password
 - Response received: Status 500, internal server error
 
-# 3. Locations
-# 3a. /locations
-- Description: Get All Locations
-- Status: ✅ Working
 
-# 3a. /locations
-- Description: Create Location
-- Status: ✅ Working
-
-# 4. Appointments
-# 4a. GET /appointments
-- Description: Get All Appointments
-- Status: ✅ Working
-
-# 4b. GET /appointments/{appointment_id}
-- Description: Get a single appointment Appointment
-- Status: ✅ Working
-
-# 4c. POST /appointment
-- Description: Create an appointment
-- Status: ❌ Not Working
-- Response: Status 500, Internal Server Error
-
-# 4d. GET /faa
-- Description: Find Available appointments based on treatment type in a given date
-- Status: ✅ Working
 
 # 5. Availability
 # 5a. GET /availabilities
