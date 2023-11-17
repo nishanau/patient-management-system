@@ -2,61 +2,59 @@
 
 ## Endpoint: /users
 
-# 1. GET /users/me
-- Description: Get the details of logged in user
-- Authorization: Bearer Token
-- URL Parameter: /users/me?populate=*
-- Status: ✅ Working
+1. GET /users/me
+    - Description: Get the details of logged in user
+    - Authorization: Bearer Token
+    - URL Parameter: /users/me?populate=*
+        - populate
+    - Status: ✅ Working
 
 # 2. GET /users?populate=*
-- Description: Get all users
-- Authorization: Bearer Token
-- URL Parameter: /users?populate=*&pagination[page]=1&pagination[pageSize]=2
-- Status: ✅ Working
+    - Description: Get all users
+    - Authorization: Bearer Token
+    - URL Parameter: /users?populate=*&pagination[page]=1&pagination[pageSize]=2
+        - populate=*
+        - pagination[page]
+        - pagination[pageSize]
+    - Status: ✅ Working
 
 # 3. GET /users/count
-- Description: Count users
-- Authorization: Bearer Token
-- URL Parameter: /users/count
-- Status: ✅ Working
+    - Description: Count users
+    - Authorization: Bearer Token
+    - URL Parameter: /users/count
+        -count
+    - Status: ✅ Working
 
 
 # 4. POST /users
-- Description: Create User
-- Authorization: User API Token
-- data body: Form data
-```Form Data
-username: text
-email: text
-password: text
-role: text
-dateOfBirth: Date
-gender: enum (Male, Female or Others)
-streetNumber: number
-street: text
-suburb: text
-country: text
-postcode: number
-firstName: text
-lastName: text
-middleName: text
-```
-- Status: ✅ Working
+    - Description: Create User
+    - Authorization: User API Token
+    - Data Body: Form data
+        - username: text
+        - email: text
+        - password: text
+        - role: text
+        - dateOfBirth: Date
+        - gender: enum (Male, Female or Others)
+        - streetNumber: number
+        - street: text
+        - suburb: text
+        - country: text
+        - postcode: number
+        - firstName: text
+        - lastName: text
+        - middleName: text
+    - Status: ✅ Working
 
 # 5. POST /auth/local
-- Description: Authenticate user
-- Authorization: No auth
-
-```Form Data
-
-```
-
--parameter: 
+    - Description: Authenticate user
+    - Authorization: No auth
+    - Data Body: Form data
+        - username: text
+        - password: text
 
 
-# 2b. /auth/local
-- Description: Authenticate the user
-- Status: ✅ Working
+
 
 # 2c. /api/token/refresh
 - Description: Refrest JWT
