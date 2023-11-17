@@ -9,7 +9,7 @@
         - populate
     - Status: ✅ Working
 
-# 2. GET /users?populate=*
+2. GET /users?populate=*
     - Description: Get all users
     - Authorization: Bearer Token
     - URL Parameter: /users?populate=*&pagination[page]=1&pagination[pageSize]=2
@@ -18,7 +18,7 @@
         - pagination[pageSize]
     - Status: ✅ Working
 
-# 3. GET /users/count
+3. GET /users/count
     - Description: Count users
     - Authorization: Bearer Token
     - URL Parameter: /users/count
@@ -26,7 +26,7 @@
     - Status: ✅ Working
 
 
-# 4. POST /users
+4. POST /users
     - Description: Create User
     - Authorization: User API Token
     - Data Body: Form data
@@ -46,15 +46,28 @@
         - middleName: text
     - Status: ✅ Working
 
-# 5. POST /auth/local
+5. POST /auth/local
     - Description: Authenticate user
     - Authorization: No auth
     - Data Body: Form data
         - username: text
         - password: text
+    - Status: ✅ Working
 
+6. POST /api/token/refresh
+    - Description: Refresh api token
+    - Authorization: Bearer Token
+    - URL Parameter: /api/token/refresh
+    - Status: ✅ Working
 
+7. POST /auth/forgot-password
+    - Description: Forgot Password
+    - Authorization: No Auth
+    - Data Body: Form Data
+        - email: text
+    - Status: ✅ Working
 
+    
 
 # 2c. /api/token/refresh
 - Description: Refrest JWT
