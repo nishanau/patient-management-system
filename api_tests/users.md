@@ -24,8 +24,8 @@
 # 4. POST /users
 - Description: Create User
 - Authorization: User API Token
-- data: Form data
-```
+- data body: Form data
+```Form Data
 username: text
 email: text
 password: text
@@ -43,9 +43,11 @@ middleName: text
 ```
 - Status: ✅ Working
 
+# 5. POST /auth/local
+- Description: Authenticate user
+- Authorization: No auth
 
-
-```json
+```Form Data
 
 ```
 
